@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+  
+    "# #",
+    "###",
+    "   " 
+  ],
+    
+  "key": {
+    "#": {
+      "item": "minecraft:wool",
+	  "data": 12
+    }
+  },
+ 
+  "result": {
+    "item": "knapm:cloth_gag",
+	"data": 12,
+    "count": 8
+  }
+}

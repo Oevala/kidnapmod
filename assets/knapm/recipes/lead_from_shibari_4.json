@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+	{
+		"item": "knapm:shibari",
+		"data": 4
+	}
+  ],
+  "result": {
+    "item": "minecraft:lead",
+	"data" : 0,
+    "count": 1
+  }
+}

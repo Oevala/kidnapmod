@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+  
+    "X#X",
+    "X#X",
+    "X#X" 
+  ],
+    
+  "key": {
+    "#": {
+      "item": "minecraft:stick",
+	   "data": 0
+    },
+    "X": {
+      "item": "minecraft:leather",
+	   "data": 0
+    }
+  },
+ 
+  "result": {
+    "item": "knapm:armbinder",
+    "count": 1
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+	{
+		"item": "knapm:tape_gag",
+		"data": 0
+	}
+  ],
+  "result": {
+    "item": "knapm:wrap_gag",
+    "count": 3
+  }
+}

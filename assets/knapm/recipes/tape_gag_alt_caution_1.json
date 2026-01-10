@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+	{
+		"item": "knapm:tape_gag",
+		"data": 4
+	},
+	{
+		"item": "minecraft:dye",
+		"data": 0
+	}
+  ],
+  "result": {
+    "item": "knapm:tape_gag",
+	"data" : 18,
+    "count": 1
+  }
+}

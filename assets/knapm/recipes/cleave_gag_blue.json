@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+	{
+		"item": "knapm:cloth_gag",
+		"data": 11
+	}
+  ],
+  "result": {
+    "item": "knapm:cleave_gag",
+	"data" : 11,
+    "count": 2
+  }
+}

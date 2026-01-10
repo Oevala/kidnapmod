@@ -1,0 +1,6 @@
+{
+    "variants": {
+        "half=bottom,variant=default": { "model": "knapm:padded_slab" },
+        "half=top,variant=default": { "model": "knapm:upper_slab_padded" }
+    }
+}

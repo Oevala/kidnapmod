@@ -1,0 +1,29 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+  
+    " # ",
+    " X ",
+    " ! " 
+  ],
+    
+  "key": {
+    "#": {
+      "item": "minecraft:redstone_block",
+	  "data": 0
+    },
+    "X": {
+      "item": "minecraft:iron_block",
+	  "data": 0
+    },
+    "!": {
+      "item": "minecraft:stick",
+	  "data": 0
+    }
+  },
+  "result": {
+    "item": "knapm:shocker_controller",
+	"data": 0,
+    "count": 1
+  }
+}

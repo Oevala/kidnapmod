@@ -1,0 +1,26 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+  
+    "   ",
+    "X#X",
+    "   " 
+  ],
+    
+  "key": {
+    "#": {
+      "item": "knapm:blindfold_cloth",
+	  "data": 13
+    },
+    "X": {
+      "item": "minecraft:string",
+	  "data": 0
+    }
+  },
+ 
+  "result": {
+    "item": "knapm:blindfold_mask",
+	"data": 13,
+    "count": 1
+  }
+}

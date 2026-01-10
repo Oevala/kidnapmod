@@ -1,0 +1,67 @@
+{
+	"collar_key_close":
+	{
+		"subtitle": "knapm.subtitle.collar_key_close",
+		"sounds": [{"name": "knapm:collar_key_close"}]
+	},
+	"collar_key_open":
+	{
+		"subtitle": "knapm.subtitle.collar_key_open",
+		"sounds": [{"name": "knapm:collar_key_open"}]
+	},
+	"collar_put":
+	{
+		"subtitle": "knapm.subtitle.collar_put",
+		"sounds": [{"name": "knapm:collar_put"}]
+	},
+	"electric_shock":
+	{
+		"subtitle": "knapm.subtitle.electric_shock",
+		"sounds": [{"name": "knapm:electric_shock"}]
+	},
+	"shocker_activated":
+	{
+		"subtitle": "knapm.subtitle.shocker_activated",
+		"sounds": [{"name": "knapm:shocker_activated"}]
+	},
+	"sticky":
+	{
+		"subtitle": "knapm.subtitle.sticky",
+		"sounds": [{"name": "knapm:sticky"}]
+	},
+	"duct_tape":
+	{
+		"subtitle": "knapm.subtitle.duct_tape",
+		"sounds": [{"name": "knapm:duct_tape"}]
+	}
+	,
+	"slap":
+	{
+		"subtitle": "knapm.subtitle.slap",
+		"sounds": [{"name": "knapm:slap"}]
+	}
+	,
+	"whip":
+	{
+		"subtitle": "knapm.subtitle.whip",
+		"sounds": [{"name": "knapm:whip"}]
+	}
+	,
+	"slime":
+	{
+		"subtitle": "knapm.subtitle.slime",
+		"sounds": [{"name": "knapm:slime"}]
+	}
+	,
+	"chain":
+	{
+		"subtitle": "knapm.subtitle.chain",
+		"sounds": [{"name": "knapm:chain"}]
+	}
+	,
+	"vine":
+	{
+		"subtitle": "knapm.subtitle.vine",
+		"sounds": [{"name": "knapm:vine"}]
+	}
+}

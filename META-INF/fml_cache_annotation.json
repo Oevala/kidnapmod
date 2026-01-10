@@ -1,0 +1,1351 @@
+{
+  "com/yuti/kidnapmod/KidnapModMain": {
+    "name": "com/yuti/kidnapmod/KidnapModMain",
+    "annotations": [
+      {
+        "type": "CLASS",
+        "name": "Lnet/minecraftforge/fml/common/Mod;",
+        "target": "com/yuti/kidnapmod/KidnapModMain",
+        "values": {
+          "acceptedMinecraftVersions": {
+            "value": "[1.12.2]"
+          },
+          "modid": {
+            "value": "knapm"
+          },
+          "name": {
+            "value": "Kidnap Mod"
+          },
+          "version": {
+            "value": "1.3.0"
+          }
+        }
+      },
+      {
+        "type": "FIELD",
+        "name": "Lnet/minecraftforge/fml/common/Mod$Instance;",
+        "target": "instance",
+        "value": {
+          "value": "knapm"
+        }
+      },
+      {
+        "type": "FIELD",
+        "name": "Lnet/minecraftforge/fml/common/SidedProxy;",
+        "target": "proxy",
+        "values": {
+          "clientSide": {
+            "value": "com.yuti.kidnapmod.proxy.ClientProxy"
+          },
+          "serverSide": {
+            "value": "com.yuti.kidnapmod.proxy.CommonProxy"
+          }
+        }
+      },
+      {
+        "type": "METHOD",
+        "name": "Lnet/minecraftforge/fml/common/Mod$EventHandler;",
+        "target": "PreInit(Lnet/minecraftforge/fml/common/event/FMLPreInitializationEvent;)V"
+      },
+      {
+        "type": "METHOD",
+        "name": "Lnet/minecraftforge/fml/common/Mod$EventHandler;",
+        "target": "init(Lnet/minecraftforge/fml/common/event/FMLInitializationEvent;)V"
+      },
+      {
+        "type": "METHOD",
+        "name": "Lnet/minecraftforge/fml/common/Mod$EventHandler;",
+        "target": "PostInit(Lnet/minecraftforge/fml/common/event/FMLPostInitializationEvent;)V"
+      },
+      {
+        "type": "METHOD",
+        "name": "Lnet/minecraftforge/fml/common/Mod$EventHandler;",
+        "target": "initServer(Lnet/minecraftforge/fml/common/event/FMLServerStartingEvent;)V"
+      }
+    ]
+  },
+  "com/yuti/kidnapmod/blocks/BlockBase": {
+    "name": "com/yuti/kidnapmod/blocks/BlockBase",
+    "interfaces": [
+      "com/yuti/kidnapmod/util/IHasModel"
+    ]
+  },
+  "com/yuti/kidnapmod/blocks/BlockKidnapBomb": {
+    "name": "com/yuti/kidnapmod/blocks/BlockKidnapBomb",
+    "interfaces": [
+      "com/yuti/kidnapmod/util/IHasModel",
+      "com/yuti/kidnapmod/blocks/ICanBeLoaded"
+    ]
+  },
+  "com/yuti/kidnapmod/blocks/BlockKidnapDoorBase": {
+    "name": "com/yuti/kidnapmod/blocks/BlockKidnapDoorBase",
+    "interfaces": [
+      "com/yuti/kidnapmod/util/IHasModel"
+    ]
+  },
+  "com/yuti/kidnapmod/blocks/BlockPaddedSlab": {
+    "name": "com/yuti/kidnapmod/blocks/BlockPaddedSlab",
+    "interfaces": [
+      "com/yuti/kidnapmod/util/IHasModel"
+    ]
+  },
+  "com/yuti/kidnapmod/blocks/BlockPaddedSlab$Variant": {
+    "name": "com/yuti/kidnapmod/blocks/BlockPaddedSlab$Variant",
+    "interfaces": [
+      "net/minecraft/util/IStringSerializable"
+    ]
+  },
+  "com/yuti/kidnapmod/blocks/BlockPaddedStairs": {
+    "name": "com/yuti/kidnapmod/blocks/BlockPaddedStairs",
+    "interfaces": [
+      "com/yuti/kidnapmod/util/IHasModel"
+    ]
+  },
+  "com/yuti/kidnapmod/blocks/BlockRopesTrap": {
+    "name": "com/yuti/kidnapmod/blocks/BlockRopesTrap",
+    "interfaces": [
+      "com/yuti/kidnapmod/blocks/ICanBeLoaded"
+    ]
+  },
+  "com/yuti/kidnapmod/blocks/BlockTrappedBed": {
+    "name": "com/yuti/kidnapmod/blocks/BlockTrappedBed",
+    "interfaces": [
+      "com/yuti/kidnapmod/blocks/ICanBeLoaded"
+    ]
+  },
+  "com/yuti/kidnapmod/capabilities/KidnapCapabilities": {
+    "name": "com/yuti/kidnapmod/capabilities/KidnapCapabilities",
+    "annotations": [
+      {
+        "type": "FIELD",
+        "name": "Lnet/minecraftforge/common/capabilities/CapabilityInject;",
+        "target": "KIDNAP_SETTINGS",
+        "value": {
+          "type": "CLASS",
+          "value": "Lcom/yuti/kidnapmod/capabilities/KidnapSettingsCapabilities;"
+        }
+      }
+    ]
+  },
+  "com/yuti/kidnapmod/capabilities/KidnapSettingsCapabilities": {
+    "name": "com/yuti/kidnapmod/capabilities/KidnapSettingsCapabilities",
+    "interfaces": [
+      "net/minecraftforge/common/capabilities/ICapabilityProvider",
+      "net/minecraftforge/common/util/INBTSerializable"
+    ]
+  },
+  "com/yuti/kidnapmod/capabilities/KidnapSettingsCapabilities$Factory": {
+    "name": "com/yuti/kidnapmod/capabilities/KidnapSettingsCapabilities$Factory",
+    "interfaces": [
+      "java/util/concurrent/Callable"
+    ]
+  },
+  "com/yuti/kidnapmod/capabilities/KidnapSettingsCapabilities$Storage": {
+    "name": "com/yuti/kidnapmod/capabilities/KidnapSettingsCapabilities$Storage",
+    "interfaces": [
+      "net/minecraftforge/common/capabilities/Capability$IStorage"
+    ]
+  },
+  "com/yuti/kidnapmod/commands/CommandCallFarestSlave$1": {
+    "name": "com/yuti/kidnapmod/commands/CommandCallFarestSlave$1",
+    "interfaces": [
+      "com/google/common/base/Predicate"
+    ]
+  },
+  "com/yuti/kidnapmod/common/ModConfig": {
+    "name": "com/yuti/kidnapmod/common/ModConfig",
+    "annotations": [
+      {
+        "type": "CLASS",
+        "name": "Lnet/minecraftforge/common/config/Config;",
+        "target": "com/yuti/kidnapmod/common/ModConfig",
+        "values": {
+          "modid": {
+            "value": "knapm"
+          },
+          "name": {
+            "value": "knapm/knapm"
+          }
+        }
+      },
+      {
+        "type": "FIELD",
+        "name": "Lnet/minecraftforge/common/config/Config$Comment;",
+        "target": "displaySelfSlaveName",
+        "value": {
+          "values": [
+            "Enable or disable render of name (of the client\u0027s player) when wearing a collar. (client side only)"
+          ]
+        }
+      },
+      {
+        "type": "FIELD",
+        "name": "Lnet/minecraftforge/common/config/Config$Comment;",
+        "target": "displayDynamicTextures",
+        "value": {
+          "values": [
+            "Enable or disable dynamic textures loading (for dynamic restraints / clothes). (client side only)"
+          ]
+        }
+      },
+      {
+        "type": "FIELD",
+        "name": "Lnet/minecraftforge/common/config/Config$Comment;",
+        "target": "displayTransparentSkins",
+        "value": {
+          "values": [
+            "Enable or disable transparents skins with dynamic textures. (client side only)"
+          ]
+        }
+      },
+      {
+        "type": "FIELD",
+        "name": "Lnet/minecraftforge/common/config/Config$Comment;",
+        "target": "modInfosOnLog",
+        "value": {
+          "values": [
+            "Enable or disable the message about the mod when you join a world. (client side only)"
+          ]
+        }
+      },
+      {
+        "type": "FIELD",
+        "name": "Lnet/minecraftforge/common/config/Config$Comment;",
+        "target": "kidnappersJob",
+        "value": {
+          "values": [
+            "Enable or disable kidnapper jobs (server side only)"
+          ]
+        }
+      },
+      {
+        "type": "FIELD",
+        "name": "Lnet/minecraftforge/common/config/Config$Comment;",
+        "target": "loadDefaultJobs",
+        "value": {
+          "values": [
+            "Enable or disable default jobs loading (from the mod) (server side only)"
+          ]
+        }
+      },
+      {
+        "type": "FIELD",
+        "name": "Lnet/minecraftforge/common/config/Config$Comment;",
+        "target": "kidnappersSell",
+        "value": {
+          "values": [
+            "Enable or disable kidnapper sales, when a player is captrued (server side only)"
+          ]
+        }
+      },
+      {
+        "type": "FIELD",
+        "name": "Lnet/minecraftforge/common/config/Config$Comment;",
+        "target": "loadDefaultSales",
+        "value": {
+          "values": [
+            "Enable or disable default kidnapper sales loading (from the mod) (server side only)"
+          ]
+        }
+      }
+    ]
+  },
+  "com/yuti/kidnapmod/data/Bounty": {
+    "name": "com/yuti/kidnapmod/data/Bounty",
+    "interfaces": [
+      "java/io/Serializable"
+    ]
+  },
+  "com/yuti/kidnapmod/data/UserSettings": {
+    "name": "com/yuti/kidnapmod/data/UserSettings",
+    "interfaces": [
+      "java/io/Serializable"
+    ]
+  },
+  "com/yuti/kidnapmod/entities/EntityDamsel": {
+    "name": "com/yuti/kidnapmod/entities/EntityDamsel",
+    "interfaces": [
+      "net/minecraft/entity/passive/IAnimals",
+      "com/yuti/kidnapmod/states/kidnapped/managers/I_Kidnapped"
+    ]
+  },
+  "com/yuti/kidnapmod/entities/EntityKidnapper": {
+    "name": "com/yuti/kidnapmod/entities/EntityKidnapper",
+    "interfaces": [
+      "net/minecraft/entity/passive/IAnimals",
+      "com/yuti/kidnapmod/states/kidnapped/managers/I_Kidnapper"
+    ]
+  },
+  "com/yuti/kidnapmod/extrainventory/capabilities/ExtraBondageContainer": {
+    "name": "com/yuti/kidnapmod/extrainventory/capabilities/ExtraBondageContainer",
+    "interfaces": [
+      "com/yuti/kidnapmod/extrainventory/capabilities/IExtraBondageItemHandler"
+    ]
+  },
+  "com/yuti/kidnapmod/extrainventory/capabilities/ExtraBondageContainerProvider": {
+    "name": "com/yuti/kidnapmod/extrainventory/capabilities/ExtraBondageContainerProvider",
+    "interfaces": [
+      "net/minecraftforge/common/util/INBTSerializable",
+      "net/minecraftforge/common/capabilities/ICapabilityProvider"
+    ]
+  },
+  "com/yuti/kidnapmod/extrainventory/capabilities/ExtraBondageItem": {
+    "name": "com/yuti/kidnapmod/extrainventory/capabilities/ExtraBondageItem",
+    "interfaces": [
+      "com/yuti/kidnapmod/extrainventory/IExtraBondageItem"
+    ]
+  },
+  "com/yuti/kidnapmod/extrainventory/capabilities/ExtraBondageItemCapabilities": {
+    "name": "com/yuti/kidnapmod/extrainventory/capabilities/ExtraBondageItemCapabilities",
+    "annotations": [
+      {
+        "type": "FIELD",
+        "name": "Lnet/minecraftforge/common/capabilities/CapabilityInject;",
+        "target": "CAPABILITY_EXTRA_BONDAGE_ITEMS",
+        "value": {
+          "type": "CLASS",
+          "value": "Lcom/yuti/kidnapmod/extrainventory/capabilities/IExtraBondageItemHandler;"
+        }
+      },
+      {
+        "type": "FIELD",
+        "name": "Lnet/minecraftforge/common/capabilities/CapabilityInject;",
+        "target": "CAPABILITY_EXTRA_ITEM_BONDAGE",
+        "value": {
+          "type": "CLASS",
+          "value": "Lcom/yuti/kidnapmod/extrainventory/IExtraBondageItem;"
+        }
+      }
+    ]
+  },
+  "com/yuti/kidnapmod/extrainventory/capabilities/ExtraBondageItemCapabilities$CapabilityExtraBondage": {
+    "name": "com/yuti/kidnapmod/extrainventory/capabilities/ExtraBondageItemCapabilities$CapabilityExtraBondage",
+    "interfaces": [
+      "net/minecraftforge/common/capabilities/Capability$IStorage"
+    ]
+  },
+  "com/yuti/kidnapmod/extrainventory/capabilities/ExtraBondageItemCapabilities$CapabilityExtraBondageItemStorage": {
+    "name": "com/yuti/kidnapmod/extrainventory/capabilities/ExtraBondageItemCapabilities$CapabilityExtraBondageItemStorage",
+    "interfaces": [
+      "net/minecraftforge/common/capabilities/Capability$IStorage"
+    ]
+  },
+  "com/yuti/kidnapmod/extrainventory/capabilities/IExtraBondageItemHandler": {
+    "name": "com/yuti/kidnapmod/extrainventory/capabilities/IExtraBondageItemHandler",
+    "interfaces": [
+      "net/minecraftforge/items/IItemHandlerModifiable"
+    ]
+  },
+  "com/yuti/kidnapmod/extrainventory/wrapper/ExtraBondageItemInventoryWrapper": {
+    "name": "com/yuti/kidnapmod/extrainventory/wrapper/ExtraBondageItemInventoryWrapper",
+    "interfaces": [
+      "net/minecraft/inventory/IInventory"
+    ]
+  },
+  "com/yuti/kidnapmod/gui/GuiBlindfold": {
+    "name": "com/yuti/kidnapmod/gui/GuiBlindfold",
+    "annotations": [
+      {
+        "type": "METHOD",
+        "name": "Lnet/minecraftforge/fml/common/eventhandler/SubscribeEvent;",
+        "target": "renderOverlay(Lnet/minecraftforge/client/event/RenderGameOverlayEvent$Post;)V"
+      }
+    ]
+  },
+  "com/yuti/kidnapmod/gui/GuiBountyEntry": {
+    "name": "com/yuti/kidnapmod/gui/GuiBountyEntry",
+    "interfaces": [
+      "net/minecraft/client/gui/GuiListExtended$IGuiListEntry"
+    ]
+  },
+  "com/yuti/kidnapmod/gui/GuiTimedOverlay": {
+    "name": "com/yuti/kidnapmod/gui/GuiTimedOverlay",
+    "annotations": [
+      {
+        "type": "METHOD",
+        "name": "Lnet/minecraftforge/fml/common/eventhandler/SubscribeEvent;",
+        "target": "renderOverlay(Lnet/minecraftforge/client/event/RenderGameOverlayEvent;)V"
+      }
+    ]
+  },
+  "com/yuti/kidnapmod/gui/GuiTimedState": {
+    "name": "com/yuti/kidnapmod/gui/GuiTimedState",
+    "annotations": [
+      {
+        "type": "METHOD",
+        "name": "Lnet/minecraftforge/fml/common/eventhandler/SubscribeEvent;",
+        "target": "renderOverlay(Lnet/minecraftforge/client/event/RenderGameOverlayEvent;)V"
+      }
+    ]
+  },
+  "com/yuti/kidnapmod/gui/extrainventory/GuiExtraBondageEvents": {
+    "name": "com/yuti/kidnapmod/gui/extrainventory/GuiExtraBondageEvents",
+    "annotations": [
+      {
+        "type": "METHOD",
+        "name": "Lnet/minecraftforge/fml/common/eventhandler/SubscribeEvent;",
+        "target": "guiPostInit(Lnet/minecraftforge/client/event/GuiScreenEvent$InitGuiEvent$Post;)V"
+      }
+    ]
+  },
+  "com/yuti/kidnapmod/items/ItemBind": {
+    "name": "com/yuti/kidnapmod/items/ItemBind",
+    "interfaces": [
+      "com/yuti/kidnapmod/util/IHasModel",
+      "com/yuti/kidnapmod/items/ItemRestraining",
+      "com/yuti/kidnapmod/items/ItemUsuableOnRestrainedPlayer",
+      "com/yuti/kidnapmod/items/IHasResistance"
+    ]
+  },
+  "com/yuti/kidnapmod/items/ItemBindColored": {
+    "name": "com/yuti/kidnapmod/items/ItemBindColored",
+    "interfaces": [
+      "com/yuti/kidnapmod/items/IHasColorVariants"
+    ]
+  },
+  "com/yuti/kidnapmod/items/ItemBlindfold": {
+    "name": "com/yuti/kidnapmod/items/ItemBlindfold",
+    "interfaces": [
+      "com/yuti/kidnapmod/extrainventory/IExtraBondageItem",
+      "com/yuti/kidnapmod/items/IAdjustable",
+      "com/yuti/kidnapmod/items/IHasBlindingEffect",
+      "com/yuti/kidnapmod/items/ItemUsuableOnRestrainedPlayer"
+    ]
+  },
+  "com/yuti/kidnapmod/items/ItemBlindfoldColored": {
+    "name": "com/yuti/kidnapmod/items/ItemBlindfoldColored",
+    "interfaces": [
+      "com/yuti/kidnapmod/items/IHasColorVariants"
+    ]
+  },
+  "com/yuti/kidnapmod/items/ItemBlockWithModel": {
+    "name": "com/yuti/kidnapmod/items/ItemBlockWithModel",
+    "interfaces": [
+      "com/yuti/kidnapmod/util/IHasModel"
+    ]
+  },
+  "com/yuti/kidnapmod/items/ItemChloroformBottle": {
+    "name": "com/yuti/kidnapmod/items/ItemChloroformBottle",
+    "interfaces": [
+      "com/yuti/kidnapmod/util/IHasModel",
+      "com/yuti/kidnapmod/items/ItemUsuableOnRestrainedPlayer"
+    ]
+  },
+  "com/yuti/kidnapmod/items/ItemClothes": {
+    "name": "com/yuti/kidnapmod/items/ItemClothes",
+    "interfaces": [
+      "com/yuti/kidnapmod/extrainventory/IExtraBondageItem"
+    ]
+  },
+  "com/yuti/kidnapmod/items/ItemCollar": {
+    "name": "com/yuti/kidnapmod/items/ItemCollar",
+    "interfaces": [
+      "com/yuti/kidnapmod/extrainventory/IExtraBondageItem",
+      "com/yuti/kidnapmod/items/IHasResistance",
+      "com/yuti/kidnapmod/items/ItemUsuableOnRestrainedPlayer"
+    ]
+  },
+  "com/yuti/kidnapmod/items/ItemEarplugs": {
+    "name": "com/yuti/kidnapmod/items/ItemEarplugs",
+    "interfaces": [
+      "com/yuti/kidnapmod/extrainventory/IExtraBondageItem"
+    ]
+  },
+  "com/yuti/kidnapmod/items/ItemGag": {
+    "name": "com/yuti/kidnapmod/items/ItemGag",
+    "interfaces": [
+      "com/yuti/kidnapmod/util/IHasModel",
+      "com/yuti/kidnapmod/items/ItemUsuableOnRestrainedPlayer",
+      "com/yuti/kidnapmod/items/ItemGaggingEffect",
+      "com/yuti/kidnapmod/items/IAdjustable"
+    ]
+  },
+  "com/yuti/kidnapmod/items/ItemGagColored": {
+    "name": "com/yuti/kidnapmod/items/ItemGagColored",
+    "interfaces": [
+      "com/yuti/kidnapmod/items/IHasColorVariants"
+    ]
+  },
+  "com/yuti/kidnapmod/items/ItemHood": {
+    "name": "com/yuti/kidnapmod/items/ItemHood",
+    "interfaces": [
+      "com/yuti/kidnapmod/items/ItemGaggingEffect"
+    ]
+  },
+  "com/yuti/kidnapmod/items/ItemKeyCollar": {
+    "name": "com/yuti/kidnapmod/items/ItemKeyCollar",
+    "interfaces": [
+      "com/yuti/kidnapmod/util/IHasModel",
+      "com/yuti/kidnapmod/items/ItemUsuableOnRestrainedPlayer"
+    ]
+  },
+  "com/yuti/kidnapmod/items/ItemKidnapWearable": {
+    "name": "com/yuti/kidnapmod/items/ItemKidnapWearable",
+    "interfaces": [
+      "com/yuti/kidnapmod/util/IHasModel",
+      "com/yuti/kidnapmod/extrainventory/IExtraBondageItem",
+      "com/yuti/kidnapmod/items/IHasVariants",
+      "com/yuti/kidnapmod/items/ItemUsuableOnRestrainedPlayer"
+    ]
+  },
+  "com/yuti/kidnapmod/items/ItemKnife": {
+    "name": "com/yuti/kidnapmod/items/ItemKnife",
+    "interfaces": [
+      "com/yuti/kidnapmod/util/IHasModel",
+      "com/yuti/kidnapmod/items/ItemUsuableOnRestrainedPlayer"
+    ]
+  },
+  "com/yuti/kidnapmod/items/ItemMedicalGag": {
+    "name": "com/yuti/kidnapmod/items/ItemMedicalGag",
+    "interfaces": [
+      "com/yuti/kidnapmod/items/IHasBlindingEffect"
+    ]
+  },
+  "com/yuti/kidnapmod/items/ItemOnwerTarget": {
+    "name": "com/yuti/kidnapmod/items/ItemOnwerTarget",
+    "interfaces": [
+      "com/yuti/kidnapmod/util/IHasModel",
+      "com/yuti/kidnapmod/items/ItemUsuableOnRestrainedPlayer"
+    ]
+  },
+  "com/yuti/kidnapmod/items/ItemRag": {
+    "name": "com/yuti/kidnapmod/items/ItemRag",
+    "interfaces": [
+      "com/yuti/kidnapmod/util/IHasModel",
+      "com/yuti/kidnapmod/items/ItemUsuableOnRestrainedPlayer"
+    ]
+  },
+  "com/yuti/kidnapmod/items/ItemRopeArrow": {
+    "name": "com/yuti/kidnapmod/items/ItemRopeArrow",
+    "interfaces": [
+      "com/yuti/kidnapmod/util/IHasModel",
+      "com/yuti/kidnapmod/items/IItemBondageItemHolder"
+    ]
+  },
+  "com/yuti/kidnapmod/items/ItemShockerController": {
+    "name": "com/yuti/kidnapmod/items/ItemShockerController",
+    "interfaces": [
+      "com/yuti/kidnapmod/util/IHasModel",
+      "com/yuti/kidnapmod/items/ItemUsuableOnRestrainedPlayer"
+    ]
+  },
+  "com/yuti/kidnapmod/items/ItemSoundAttack": {
+    "name": "com/yuti/kidnapmod/items/ItemSoundAttack",
+    "interfaces": [
+      "com/yuti/kidnapmod/util/IHasModel"
+    ]
+  },
+  "com/yuti/kidnapmod/items/ItemTrappedBed": {
+    "name": "com/yuti/kidnapmod/items/ItemTrappedBed",
+    "interfaces": [
+      "com/yuti/kidnapmod/util/IHasModel",
+      "com/yuti/kidnapmod/items/IItemBondageItemHolder",
+      "com/yuti/kidnapmod/items/IHasColorVariants"
+    ]
+  },
+  "com/yuti/kidnapmod/models/layers/DynamicClothesLayer": {
+    "name": "com/yuti/kidnapmod/models/layers/DynamicClothesLayer",
+    "interfaces": [
+      "net/minecraft/client/renderer/entity/layers/LayerRenderer"
+    ]
+  },
+  "com/yuti/kidnapmod/models/layers/ExtraBondageItemRenderLayer": {
+    "name": "com/yuti/kidnapmod/models/layers/ExtraBondageItemRenderLayer",
+    "interfaces": [
+      "net/minecraft/client/renderer/entity/layers/LayerRenderer"
+    ]
+  },
+  "com/yuti/kidnapmod/network/PacketAskForBounties": {
+    "name": "com/yuti/kidnapmod/network/PacketAskForBounties",
+    "interfaces": [
+      "net/minecraftforge/fml/common/network/simpleimpl/IMessage"
+    ]
+  },
+  "com/yuti/kidnapmod/network/PacketAskForBounties$Handler": {
+    "name": "com/yuti/kidnapmod/network/PacketAskForBounties$Handler",
+    "interfaces": [
+      "net/minecraftforge/fml/common/network/simpleimpl/IMessageHandler"
+    ]
+  },
+  "com/yuti/kidnapmod/network/PacketDeleteBounty": {
+    "name": "com/yuti/kidnapmod/network/PacketDeleteBounty",
+    "interfaces": [
+      "net/minecraftforge/fml/common/network/simpleimpl/IMessage"
+    ]
+  },
+  "com/yuti/kidnapmod/network/PacketDeleteBounty$Handler": {
+    "name": "com/yuti/kidnapmod/network/PacketDeleteBounty$Handler",
+    "interfaces": [
+      "net/minecraftforge/fml/common/network/simpleimpl/IMessageHandler"
+    ]
+  },
+  "com/yuti/kidnapmod/network/PacketJoinServer": {
+    "name": "com/yuti/kidnapmod/network/PacketJoinServer",
+    "interfaces": [
+      "net/minecraftforge/fml/common/network/simpleimpl/IMessage"
+    ]
+  },
+  "com/yuti/kidnapmod/network/PacketJoinServer$Handler": {
+    "name": "com/yuti/kidnapmod/network/PacketJoinServer$Handler",
+    "interfaces": [
+      "net/minecraftforge/fml/common/network/simpleimpl/IMessageHandler"
+    ]
+  },
+  "com/yuti/kidnapmod/network/PacketManageSlaveService": {
+    "name": "com/yuti/kidnapmod/network/PacketManageSlaveService",
+    "interfaces": [
+      "net/minecraftforge/fml/common/network/simpleimpl/IMessage"
+    ]
+  },
+  "com/yuti/kidnapmod/network/PacketManageSlaveService$Handler": {
+    "name": "com/yuti/kidnapmod/network/PacketManageSlaveService$Handler",
+    "interfaces": [
+      "net/minecraftforge/fml/common/network/simpleimpl/IMessageHandler"
+    ]
+  },
+  "com/yuti/kidnapmod/network/PacketPlaceTrap": {
+    "name": "com/yuti/kidnapmod/network/PacketPlaceTrap",
+    "interfaces": [
+      "net/minecraftforge/fml/common/network/simpleimpl/IMessage"
+    ]
+  },
+  "com/yuti/kidnapmod/network/PacketPlaceTrap$Handler": {
+    "name": "com/yuti/kidnapmod/network/PacketPlaceTrap$Handler",
+    "interfaces": [
+      "net/minecraftforge/fml/common/network/simpleimpl/IMessageHandler"
+    ]
+  },
+  "com/yuti/kidnapmod/network/PacketRequestOpenGuiManageSlavesServices": {
+    "name": "com/yuti/kidnapmod/network/PacketRequestOpenGuiManageSlavesServices",
+    "interfaces": [
+      "net/minecraftforge/fml/common/network/simpleimpl/IMessage"
+    ]
+  },
+  "com/yuti/kidnapmod/network/PacketRequestOpenGuiManageSlavesServices$Handler": {
+    "name": "com/yuti/kidnapmod/network/PacketRequestOpenGuiManageSlavesServices$Handler",
+    "interfaces": [
+      "net/minecraftforge/fml/common/network/simpleimpl/IMessageHandler"
+    ]
+  },
+  "com/yuti/kidnapmod/network/PacketRequestOpenGuiTakeOffBondageItem": {
+    "name": "com/yuti/kidnapmod/network/PacketRequestOpenGuiTakeOffBondageItem",
+    "interfaces": [
+      "net/minecraftforge/fml/common/network/simpleimpl/IMessage"
+    ]
+  },
+  "com/yuti/kidnapmod/network/PacketRequestOpenGuiTakeOffBondageItem$Handler": {
+    "name": "com/yuti/kidnapmod/network/PacketRequestOpenGuiTakeOffBondageItem$Handler",
+    "interfaces": [
+      "net/minecraftforge/fml/common/network/simpleimpl/IMessageHandler"
+    ]
+  },
+  "com/yuti/kidnapmod/network/PacketRestrainState": {
+    "name": "com/yuti/kidnapmod/network/PacketRestrainState",
+    "interfaces": [
+      "net/minecraftforge/fml/common/network/simpleimpl/IMessage"
+    ]
+  },
+  "com/yuti/kidnapmod/network/PacketRestrainState$Handler": {
+    "name": "com/yuti/kidnapmod/network/PacketRestrainState$Handler",
+    "interfaces": [
+      "net/minecraftforge/fml/common/network/simpleimpl/IMessageHandler"
+    ]
+  },
+  "com/yuti/kidnapmod/network/PacketSendBounties": {
+    "name": "com/yuti/kidnapmod/network/PacketSendBounties",
+    "interfaces": [
+      "net/minecraftforge/fml/common/network/simpleimpl/IMessage"
+    ]
+  },
+  "com/yuti/kidnapmod/network/PacketSendBounties$Handler": {
+    "name": "com/yuti/kidnapmod/network/PacketSendBounties$Handler",
+    "interfaces": [
+      "net/minecraftforge/fml/common/network/simpleimpl/IMessageHandler"
+    ]
+  },
+  "com/yuti/kidnapmod/network/PacketStruggleServer": {
+    "name": "com/yuti/kidnapmod/network/PacketStruggleServer",
+    "interfaces": [
+      "net/minecraftforge/fml/common/network/simpleimpl/IMessage"
+    ]
+  },
+  "com/yuti/kidnapmod/network/PacketStruggleServer$Handler": {
+    "name": "com/yuti/kidnapmod/network/PacketStruggleServer$Handler",
+    "interfaces": [
+      "net/minecraftforge/fml/common/network/simpleimpl/IMessageHandler"
+    ]
+  },
+  "com/yuti/kidnapmod/network/PacketTakeOffBondageItem": {
+    "name": "com/yuti/kidnapmod/network/PacketTakeOffBondageItem",
+    "interfaces": [
+      "net/minecraftforge/fml/common/network/simpleimpl/IMessage"
+    ]
+  },
+  "com/yuti/kidnapmod/network/PacketTakeOffBondageItem$Handler": {
+    "name": "com/yuti/kidnapmod/network/PacketTakeOffBondageItem$Handler",
+    "interfaces": [
+      "net/minecraftforge/fml/common/network/simpleimpl/IMessageHandler"
+    ]
+  },
+  "com/yuti/kidnapmod/network/PacketTightenBinds": {
+    "name": "com/yuti/kidnapmod/network/PacketTightenBinds",
+    "interfaces": [
+      "net/minecraftforge/fml/common/network/simpleimpl/IMessage"
+    ]
+  },
+  "com/yuti/kidnapmod/network/PacketTightenBinds$Handler": {
+    "name": "com/yuti/kidnapmod/network/PacketTightenBinds$Handler",
+    "interfaces": [
+      "net/minecraftforge/fml/common/network/simpleimpl/IMessageHandler"
+    ]
+  },
+  "com/yuti/kidnapmod/network/PacketTying": {
+    "name": "com/yuti/kidnapmod/network/PacketTying",
+    "interfaces": [
+      "net/minecraftforge/fml/common/network/simpleimpl/IMessage"
+    ]
+  },
+  "com/yuti/kidnapmod/network/PacketTying$Handler": {
+    "name": "com/yuti/kidnapmod/network/PacketTying$Handler",
+    "interfaces": [
+      "net/minecraftforge/fml/common/network/simpleimpl/IMessageHandler"
+    ]
+  },
+  "com/yuti/kidnapmod/network/PacketUntying": {
+    "name": "com/yuti/kidnapmod/network/PacketUntying",
+    "interfaces": [
+      "net/minecraftforge/fml/common/network/simpleimpl/IMessage"
+    ]
+  },
+  "com/yuti/kidnapmod/network/PacketUntying$Handler": {
+    "name": "com/yuti/kidnapmod/network/PacketUntying$Handler",
+    "interfaces": [
+      "net/minecraftforge/fml/common/network/simpleimpl/IMessageHandler"
+    ]
+  },
+  "com/yuti/kidnapmod/network/capabilities/PacketCapabilityKidnappingSettings": {
+    "name": "com/yuti/kidnapmod/network/capabilities/PacketCapabilityKidnappingSettings",
+    "interfaces": [
+      "net/minecraftforge/fml/common/network/simpleimpl/IMessage"
+    ]
+  },
+  "com/yuti/kidnapmod/network/capabilities/PacketCapabilityKidnappingSettings$ClientHandler": {
+    "name": "com/yuti/kidnapmod/network/capabilities/PacketCapabilityKidnappingSettings$ClientHandler",
+    "interfaces": [
+      "net/minecraftforge/fml/common/network/simpleimpl/IMessageHandler"
+    ]
+  },
+  "com/yuti/kidnapmod/network/capabilities/SchedulePacketCapabilitiesKidnappingSettings": {
+    "name": "com/yuti/kidnapmod/network/capabilities/SchedulePacketCapabilitiesKidnappingSettings",
+    "interfaces": [
+      "java/lang/Runnable"
+    ]
+  },
+  "com/yuti/kidnapmod/network/extrainventory/PacketOpenExtraBondageInventory": {
+    "name": "com/yuti/kidnapmod/network/extrainventory/PacketOpenExtraBondageInventory",
+    "interfaces": [
+      "net/minecraftforge/fml/common/network/simpleimpl/IMessage",
+      "net/minecraftforge/fml/common/network/simpleimpl/IMessageHandler"
+    ]
+  },
+  "com/yuti/kidnapmod/network/extrainventory/PacketOpenExtraBondageInventory$1": {
+    "name": "com/yuti/kidnapmod/network/extrainventory/PacketOpenExtraBondageInventory$1",
+    "interfaces": [
+      "java/lang/Runnable"
+    ]
+  },
+  "com/yuti/kidnapmod/network/extrainventory/PacketOpenNormalInventory": {
+    "name": "com/yuti/kidnapmod/network/extrainventory/PacketOpenNormalInventory",
+    "interfaces": [
+      "net/minecraftforge/fml/common/network/simpleimpl/IMessage",
+      "net/minecraftforge/fml/common/network/simpleimpl/IMessageHandler"
+    ]
+  },
+  "com/yuti/kidnapmod/network/extrainventory/PacketOpenNormalInventory$1": {
+    "name": "com/yuti/kidnapmod/network/extrainventory/PacketOpenNormalInventory$1",
+    "interfaces": [
+      "java/lang/Runnable"
+    ]
+  },
+  "com/yuti/kidnapmod/network/extrainventory/PacketSynchronizeInventory": {
+    "name": "com/yuti/kidnapmod/network/extrainventory/PacketSynchronizeInventory",
+    "interfaces": [
+      "net/minecraftforge/fml/common/network/simpleimpl/IMessage"
+    ]
+  },
+  "com/yuti/kidnapmod/network/extrainventory/PacketSynchronizeInventory$Handler": {
+    "name": "com/yuti/kidnapmod/network/extrainventory/PacketSynchronizeInventory$Handler",
+    "interfaces": [
+      "net/minecraftforge/fml/common/network/simpleimpl/IMessageHandler"
+    ]
+  },
+  "com/yuti/kidnapmod/network/extrainventory/PacketSynchronizeInventory$Handler$1": {
+    "name": "com/yuti/kidnapmod/network/extrainventory/PacketSynchronizeInventory$Handler$1",
+    "interfaces": [
+      "java/lang/Runnable"
+    ]
+  },
+  "com/yuti/kidnapmod/proxy/CommonProxy": {
+    "name": "com/yuti/kidnapmod/proxy/CommonProxy",
+    "interfaces": [
+      "net/minecraftforge/fml/common/network/IGuiHandler"
+    ]
+  },
+  "com/yuti/kidnapmod/recipes/RecipeBondageColored": {
+    "name": "com/yuti/kidnapmod/recipes/RecipeBondageColored",
+    "interfaces": [
+      "net/minecraft/item/crafting/IRecipe"
+    ]
+  },
+  "com/yuti/kidnapmod/recipes/RecipeBondageItemLoader": {
+    "name": "com/yuti/kidnapmod/recipes/RecipeBondageItemLoader",
+    "interfaces": [
+      "net/minecraft/item/crafting/IRecipe"
+    ]
+  },
+  "com/yuti/kidnapmod/recipes/RecipeResistanceItemsMerger": {
+    "name": "com/yuti/kidnapmod/recipes/RecipeResistanceItemsMerger",
+    "interfaces": [
+      "net/minecraft/item/crafting/IRecipe"
+    ]
+  },
+  "com/yuti/kidnapmod/recipes/RecipeShockCollar": {
+    "name": "com/yuti/kidnapmod/recipes/RecipeShockCollar",
+    "interfaces": [
+      "net/minecraft/item/crafting/IRecipe"
+    ]
+  },
+  "com/yuti/kidnapmod/recipes/RecipeShockerMerger": {
+    "name": "com/yuti/kidnapmod/recipes/RecipeShockerMerger",
+    "interfaces": [
+      "net/minecraft/item/crafting/IRecipe"
+    ]
+  },
+  "com/yuti/kidnapmod/states/PlayerBindState": {
+    "name": "com/yuti/kidnapmod/states/PlayerBindState",
+    "interfaces": [
+      "com/yuti/kidnapmod/states/kidnapped/managers/I_Kidnapped"
+    ]
+  },
+  "com/yuti/kidnapmod/states/kidnapped/managers/PlayerKidnapperManager": {
+    "name": "com/yuti/kidnapmod/states/kidnapped/managers/PlayerKidnapperManager",
+    "interfaces": [
+      "com/yuti/kidnapmod/states/kidnapped/managers/I_Kidnapper"
+    ]
+  },
+  "com/yuti/kidnapmod/tileentity/TileEntityBondageItemHandler": {
+    "name": "com/yuti/kidnapmod/tileentity/TileEntityBondageItemHandler",
+    "interfaces": [
+      "com/yuti/kidnapmod/tileentity/ITileEntityBondageItemHolder"
+    ]
+  },
+  "com/yuti/kidnapmod/tileentity/TileEntityTrappedBed": {
+    "name": "com/yuti/kidnapmod/tileentity/TileEntityTrappedBed",
+    "interfaces": [
+      "com/yuti/kidnapmod/tileentity/ITileEntityBondageItemHolder"
+    ]
+  },
+  "com/yuti/kidnapmod/util/handlers/ConfigHandler": {
+    "name": "com/yuti/kidnapmod/util/handlers/ConfigHandler",
+    "annotations": [
+      {
+        "type": "CLASS",
+        "name": "Lnet/minecraftforge/fml/common/Mod$EventBusSubscriber;",
+        "target": "com/yuti/kidnapmod/util/handlers/ConfigHandler"
+      },
+      {
+        "type": "METHOD",
+        "name": "Lnet/minecraftforge/fml/common/eventhandler/SubscribeEvent;",
+        "target": "onConfigChange(Lnet/minecraftforge/fml/client/event/ConfigChangedEvent$OnConfigChangedEvent;)V"
+      }
+    ]
+  },
+  "com/yuti/kidnapmod/util/handlers/KeyboardHandler": {
+    "name": "com/yuti/kidnapmod/util/handlers/KeyboardHandler",
+    "annotations": [
+      {
+        "type": "CLASS",
+        "name": "Lnet/minecraftforge/fml/common/Mod$EventBusSubscriber;",
+        "target": "com/yuti/kidnapmod/util/handlers/KeyboardHandler"
+      },
+      {
+        "type": "METHOD",
+        "name": "Lnet/minecraftforge/fml/common/eventhandler/SubscribeEvent;",
+        "target": "onEvent(Lnet/minecraftforge/fml/common/gameevent/InputEvent$KeyInputEvent;)V",
+        "values": {
+          "priority": {
+            "type": "ENUM",
+            "value": "Lnet/minecraftforge/fml/common/eventhandler/EventPriority;/NORMAL"
+          },
+          "receiveCanceled": {
+            "type": "BOOL",
+            "value": "true"
+          }
+        }
+      }
+    ]
+  },
+  "com/yuti/kidnapmod/util/handlers/KidnapCapabilitiesHandler": {
+    "name": "com/yuti/kidnapmod/util/handlers/KidnapCapabilitiesHandler",
+    "annotations": [
+      {
+        "type": "CLASS",
+        "name": "Lnet/minecraftforge/fml/common/Mod$EventBusSubscriber;",
+        "target": "com/yuti/kidnapmod/util/handlers/KidnapCapabilitiesHandler"
+      },
+      {
+        "type": "METHOD",
+        "name": "Lnet/minecraftforge/fml/common/eventhandler/SubscribeEvent;",
+        "target": "onPlayerCloned(Lnet/minecraftforge/event/entity/player/PlayerEvent$Clone;)V"
+      },
+      {
+        "type": "METHOD",
+        "name": "Lnet/minecraftforge/fml/common/eventhandler/SubscribeEvent;",
+        "target": "onPlayerRespawn(Lnet/minecraftforge/fml/common/gameevent/PlayerEvent$PlayerRespawnEvent;)V"
+      },
+      {
+        "type": "METHOD",
+        "name": "Lnet/minecraftforge/fml/common/eventhandler/SubscribeEvent;",
+        "target": "onPlayerChangeDimension(Lnet/minecraftforge/fml/common/gameevent/PlayerEvent$PlayerChangedDimensionEvent;)V"
+      },
+      {
+        "type": "METHOD",
+        "name": "Lnet/minecraftforge/fml/common/eventhandler/SubscribeEvent;",
+        "target": "onAttachCapability(Lnet/minecraftforge/event/AttachCapabilitiesEvent;)V"
+      },
+      {
+        "type": "METHOD",
+        "name": "Lnet/minecraftforge/fml/common/eventhandler/SubscribeEvent;",
+        "target": "playerLog(Lnet/minecraftforge/fml/common/gameevent/PlayerEvent$PlayerLoggedInEvent;)V"
+      },
+      {
+        "type": "METHOD",
+        "name": "Lnet/minecraftforge/fml/common/eventhandler/SubscribeEvent;",
+        "target": "playerJoin(Lnet/minecraftforge/event/entity/EntityJoinWorldEvent;)V"
+      },
+      {
+        "type": "METHOD",
+        "name": "Lnet/minecraftforge/fml/common/eventhandler/SubscribeEvent;",
+        "target": "onStartTracking(Lnet/minecraftforge/event/entity/player/PlayerEvent$StartTracking;)V"
+      }
+    ]
+  },
+  "com/yuti/kidnapmod/util/handlers/PlayerKidnapActionsHandler": {
+    "name": "com/yuti/kidnapmod/util/handlers/PlayerKidnapActionsHandler",
+    "annotations": [
+      {
+        "type": "CLASS",
+        "name": "Lnet/minecraftforge/fml/common/Mod$EventBusSubscriber;",
+        "target": "com/yuti/kidnapmod/util/handlers/PlayerKidnapActionsHandler"
+      },
+      {
+        "type": "METHOD",
+        "name": "Lnet/minecraftforge/fml/common/eventhandler/SubscribeEvent;",
+        "target": "onPlayerTalk(Lnet/minecraftforge/event/ServerChatEvent;)V"
+      },
+      {
+        "type": "METHOD",
+        "name": "Lnet/minecraftforge/fml/common/eventhandler/SubscribeEvent;",
+        "target": "onPlayerFormatName(Lnet/minecraftforge/event/entity/player/PlayerEvent$NameFormat;)V"
+      },
+      {
+        "type": "METHOD",
+        "name": "Lnet/minecraftforge/fml/common/eventhandler/SubscribeEvent;",
+        "target": "onPlayerEnslave(Lnet/minecraftforge/event/entity/player/PlayerInteractEvent$EntityInteract;)V"
+      },
+      {
+        "type": "METHOD",
+        "name": "Lnet/minecraftforge/fml/common/eventhandler/SubscribeEvent;",
+        "target": "onDamselInteract(Lnet/minecraftforge/event/entity/player/PlayerInteractEvent$EntityInteract;)V",
+        "values": {
+          "priority": {
+            "type": "ENUM",
+            "value": "Lnet/minecraftforge/fml/common/eventhandler/EventPriority;/LOWEST"
+          }
+        }
+      },
+      {
+        "type": "METHOD",
+        "name": "Lnet/minecraftforge/fml/common/eventhandler/SubscribeEvent;",
+        "target": "onPlayerCheckStillSlaveOfPlayer(Lnet/minecraftforge/fml/common/gameevent/TickEvent$PlayerTickEvent;)V"
+      },
+      {
+        "type": "METHOD",
+        "name": "Lnet/minecraftforge/fml/common/eventhandler/SubscribeEvent;",
+        "target": "onPlayerCheckSlaveTransport(Lnet/minecraftforge/fml/common/gameevent/TickEvent$WorldTickEvent;)V"
+      },
+      {
+        "type": "METHOD",
+        "name": "Lnet/minecraftforge/fml/common/eventhandler/SubscribeEvent;",
+        "target": "onPlayerReconnect(Lnet/minecraftforge/fml/common/gameevent/PlayerEvent$PlayerLoggedInEvent;)V"
+      },
+      {
+        "type": "METHOD",
+        "name": "Lnet/minecraftforge/fml/common/eventhandler/SubscribeEvent;",
+        "target": "onLogout(Lnet/minecraftforge/fml/common/gameevent/PlayerEvent$PlayerLoggedOutEvent;)V"
+      },
+      {
+        "type": "METHOD",
+        "name": "Lnet/minecraftforge/fml/common/eventhandler/SubscribeEvent;",
+        "target": "onLogoutClient(Lnet/minecraftforge/fml/common/gameevent/PlayerEvent$PlayerLoggedOutEvent;)V"
+      },
+      {
+        "type": "METHOD",
+        "name": "Lnet/minecraftforge/fml/common/eventhandler/SubscribeEvent;",
+        "target": "onRenderPlayer(Lnet/minecraftforge/client/event/RenderPlayerEvent$Pre;)V"
+      },
+      {
+        "type": "METHOD",
+        "name": "Lnet/minecraftforge/fml/common/eventhandler/SubscribeEvent;",
+        "target": "onRenderDamsel(Lnet/minecraftforge/client/event/RenderLivingEvent$Pre;)V"
+      },
+      {
+        "type": "METHOD",
+        "name": "Lnet/minecraftforge/fml/common/eventhandler/SubscribeEvent;",
+        "target": "onPlayerInnvunabilitFallyWhenLeashed(Lnet/minecraftforge/event/entity/living/LivingFallEvent;)V"
+      },
+      {
+        "type": "METHOD",
+        "name": "Lnet/minecraftforge/fml/common/eventhandler/SubscribeEvent;",
+        "target": "onPlayerLeashedNotAttackableByMonster(Lnet/minecraftforge/event/entity/living/LivingSetAttackTargetEvent;)V"
+      },
+      {
+        "type": "METHOD",
+        "name": "Lnet/minecraftforge/fml/common/eventhandler/SubscribeEvent;",
+        "target": "onSlaveClick(Lnet/minecraftforge/event/entity/player/PlayerInteractEvent;)V",
+        "values": {
+          "priority": {
+            "type": "ENUM",
+            "value": "Lnet/minecraftforge/fml/common/eventhandler/EventPriority;/HIGHEST"
+          }
+        }
+      },
+      {
+        "type": "METHOD",
+        "name": "Lnet/minecraftforge/fml/common/eventhandler/SubscribeEvent;",
+        "target": "preventPlayerSneakingWhileTiedUp(Lnet/minecraftforge/client/event/InputUpdateEvent;)V"
+      },
+      {
+        "type": "METHOD",
+        "name": "Lnet/minecraftforge/fml/common/eventhandler/SubscribeEvent;",
+        "target": "preventSneakingTiedUpServer(Lnet/minecraftforge/fml/common/gameevent/TickEvent$PlayerTickEvent;)V"
+      },
+      {
+        "type": "METHOD",
+        "name": "Lnet/minecraftforge/fml/common/eventhandler/SubscribeEvent;",
+        "target": "preventSlaveToAttack(Lnet/minecraftforge/event/entity/player/AttackEntityEvent;)V"
+      },
+      {
+        "type": "METHOD",
+        "name": "Lnet/minecraftforge/fml/common/eventhandler/SubscribeEvent;",
+        "target": "onRenderTiedUpHand(Lnet/minecraftforge/client/event/RenderSpecificHandEvent;)V"
+      },
+      {
+        "type": "METHOD",
+        "name": "Lnet/minecraftforge/fml/common/eventhandler/SubscribeEvent;",
+        "target": "onPlayerInteractWithTiedUpPlayer(Lnet/minecraftforge/event/entity/player/PlayerInteractEvent$EntityInteract;)V"
+      },
+      {
+        "type": "METHOD",
+        "name": "Lnet/minecraftforge/fml/common/eventhandler/SubscribeEvent;",
+        "target": "preventFOVUpdate(Lnet/minecraftforge/client/event/FOVUpdateEvent;)V"
+      },
+      {
+        "type": "METHOD",
+        "name": "Lnet/minecraftforge/fml/common/eventhandler/SubscribeEvent;",
+        "target": "preventSprintTiedUp(Lnet/minecraftforge/fml/common/gameevent/TickEvent$PlayerTickEvent;)V"
+      },
+      {
+        "type": "METHOD",
+        "name": "Lnet/minecraftforge/fml/common/eventhandler/SubscribeEvent;",
+        "target": "onPlayerInteractWithKidnapper(Lnet/minecraftforge/event/entity/player/PlayerInteractEvent$EntityInteract;)V"
+      },
+      {
+        "type": "METHOD",
+        "name": "Lnet/minecraftforge/fml/common/eventhandler/SubscribeEvent;",
+        "target": "onRespawnEvent(Lnet/minecraftforge/fml/common/gameevent/PlayerEvent$PlayerRespawnEvent;)V"
+      },
+      {
+        "type": "METHOD",
+        "name": "Lnet/minecraftforge/fml/common/eventhandler/SubscribeEvent;",
+        "target": "onClonePlayer(Lnet/minecraftforge/event/entity/player/PlayerEvent$Clone;)V"
+      },
+      {
+        "type": "METHOD",
+        "name": "Lnet/minecraftforge/fml/common/eventhandler/SubscribeEvent;",
+        "target": "onChangeDimension(Lnet/minecraftforge/fml/common/gameevent/PlayerEvent$PlayerChangedDimensionEvent;)V"
+      },
+      {
+        "type": "METHOD",
+        "name": "Lnet/minecraftforge/fml/common/eventhandler/SubscribeEvent;",
+        "target": "onCommandManagement(Lnet/minecraftforge/event/CommandEvent;)V"
+      },
+      {
+        "type": "METHOD",
+        "name": "Lnet/minecraftforge/fml/common/eventhandler/SubscribeEvent;",
+        "target": "manageAttackDamsel(Lnet/minecraftforge/event/entity/player/AttackEntityEvent;)V"
+      },
+      {
+        "type": "METHOD",
+        "name": "Lnet/minecraftforge/fml/common/eventhandler/SubscribeEvent;",
+        "target": "onUntyingTarget(Lnet/minecraftforge/event/entity/player/PlayerInteractEvent$EntityInteract;)V"
+      },
+      {
+        "type": "METHOD",
+        "name": "Lnet/minecraftforge/fml/common/eventhandler/SubscribeEvent;",
+        "target": "onSlaveCheckFood(Lnet/minecraftforge/fml/common/gameevent/TickEvent$PlayerTickEvent;)V"
+      },
+      {
+        "type": "METHOD",
+        "name": "Lnet/minecraftforge/fml/common/eventhandler/SubscribeEvent;",
+        "target": "onPlayerDeliverSlave(Lnet/minecraftforge/event/entity/player/PlayerInteractEvent$EntityInteract;)V"
+      },
+      {
+        "type": "METHOD",
+        "name": "Lnet/minecraftforge/fml/common/eventhandler/SubscribeEvent;",
+        "target": "onPlayerJoinWorld(Lnet/minecraftforge/event/entity/EntityJoinWorldEvent;)V"
+      },
+      {
+        "type": "METHOD",
+        "name": "Lnet/minecraftforge/fml/common/eventhandler/SubscribeEvent;",
+        "target": "onPlayerPickUpKidnapItem(Lnet/minecraftforge/event/entity/player/EntityItemPickupEvent;)V"
+      },
+      {
+        "type": "METHOD",
+        "name": "Lnet/minecraftforge/fml/common/eventhandler/SubscribeEvent;",
+        "target": "onBlindfoldCheckScreen(Lnet/minecraftforge/fml/common/gameevent/TickEvent$PlayerTickEvent;)V"
+      },
+      {
+        "type": "METHOD",
+        "name": "Lnet/minecraftforge/fml/common/eventhandler/SubscribeEvent;",
+        "target": "onCheckAutoCheckCollar(Lnet/minecraftforge/fml/common/gameevent/TickEvent$PlayerTickEvent;)V"
+      },
+      {
+        "type": "METHOD",
+        "name": "Lnet/minecraftforge/fml/common/eventhandler/SubscribeEvent;",
+        "target": "onPreventAttackArrowOnKidnapper(Lnet/minecraftforge/event/entity/ProjectileImpactEvent;)V"
+      },
+      {
+        "type": "METHOD",
+        "name": "Lnet/minecraftforge/fml/common/eventhandler/SubscribeEvent;",
+        "target": "preventAttackChloroformed(Lnet/minecraftforge/event/entity/player/AttackEntityEvent;)V"
+      },
+      {
+        "type": "METHOD",
+        "name": "Lnet/minecraftforge/fml/common/eventhandler/SubscribeEvent;",
+        "target": "preventHurtWall(Lnet/minecraftforge/event/entity/living/LivingHurtEvent;)V"
+      },
+      {
+        "type": "METHOD",
+        "name": "Lnet/minecraftforge/fml/common/eventhandler/SubscribeEvent;",
+        "target": "onKidnappedDeath(Lnet/minecraftforge/event/entity/living/LivingDeathEvent;)V"
+      },
+      {
+        "type": "METHOD",
+        "name": "Lnet/minecraftforge/fml/common/eventhandler/SubscribeEvent;",
+        "target": "onGiveSeedsToBirdy(Lnet/minecraftforge/event/entity/player/PlayerInteractEvent$EntityInteract;)V"
+      },
+      {
+        "type": "METHOD",
+        "name": "Lnet/minecraftforge/fml/common/eventhandler/SubscribeEvent;",
+        "target": "onRightClickEmptyInteractionNpc(Lnet/minecraftforge/event/entity/player/PlayerInteractEvent$EntityInteract;)V"
+      },
+      {
+        "type": "METHOD",
+        "name": "Lnet/minecraftforge/fml/common/eventhandler/SubscribeEvent;",
+        "target": "onPlayerInteractWithCollaredSlave(Lnet/minecraftforge/event/entity/player/PlayerInteractEvent$EntityInteract;)V"
+      },
+      {
+        "type": "METHOD",
+        "name": "Lnet/minecraftforge/fml/common/eventhandler/SubscribeEvent;",
+        "target": "avoidTransportTransform(Lnet/minecraftforge/event/entity/EntityStruckByLightningEvent;)V"
+      },
+      {
+        "type": "METHOD",
+        "name": "Lnet/minecraftforge/fml/common/eventhandler/SubscribeEvent;",
+        "target": "checkUnloadDamselsUnloadChunk(Lnet/minecraftforge/event/world/ChunkEvent$Unload;)V"
+      },
+      {
+        "type": "METHOD",
+        "name": "Lnet/minecraftforge/fml/common/eventhandler/SubscribeEvent;",
+        "target": "checkUnloadDamselsSaveChunk(Lnet/minecraftforge/event/world/ChunkDataEvent$Save;)V"
+      },
+      {
+        "type": "METHOD",
+        "name": "Lnet/minecraftforge/fml/common/eventhandler/SubscribeEvent;",
+        "target": "checkLoadDamselsLoadChunk(Lnet/minecraftforge/event/world/ChunkEvent$Load;)V"
+      }
+    ]
+  },
+  "com/yuti/kidnapmod/util/handlers/PlayerKidnapActionsHandler$1": {
+    "name": "com/yuti/kidnapmod/util/handlers/PlayerKidnapActionsHandler$1",
+    "interfaces": [
+      "com/google/common/base/Predicate"
+    ]
+  },
+  "com/yuti/kidnapmod/util/handlers/RegistryHandler": {
+    "name": "com/yuti/kidnapmod/util/handlers/RegistryHandler",
+    "annotations": [
+      {
+        "type": "CLASS",
+        "name": "Lnet/minecraftforge/fml/common/Mod$EventBusSubscriber;",
+        "target": "com/yuti/kidnapmod/util/handlers/RegistryHandler"
+      },
+      {
+        "type": "METHOD",
+        "name": "Lnet/minecraftforge/fml/common/eventhandler/SubscribeEvent;",
+        "target": "onItemRegister(Lnet/minecraftforge/event/RegistryEvent$Register;)V"
+      },
+      {
+        "type": "METHOD",
+        "name": "Lnet/minecraftforge/fml/common/eventhandler/SubscribeEvent;",
+        "target": "onBlockRegister(Lnet/minecraftforge/event/RegistryEvent$Register;)V"
+      },
+      {
+        "type": "METHOD",
+        "name": "Lnet/minecraftforge/fml/common/eventhandler/SubscribeEvent;",
+        "target": "onModelRegister(Lnet/minecraftforge/client/event/ModelRegistryEvent;)V"
+      },
+      {
+        "type": "METHOD",
+        "name": "Lnet/minecraftforge/fml/common/eventhandler/SubscribeEvent;",
+        "target": "onRegisterSounds(Lnet/minecraftforge/event/RegistryEvent$Register;)V"
+      },
+      {
+        "type": "METHOD",
+        "name": "Lnet/minecraftforge/fml/common/eventhandler/SubscribeEvent;",
+        "target": "onRegisterExtraRecipes(Lnet/minecraftforge/event/RegistryEvent$Register;)V"
+      }
+    ]
+  },
+  "com/yuti/kidnapmod/util/handlers/RenderHandler$1": {
+    "name": "com/yuti/kidnapmod/util/handlers/RenderHandler$1",
+    "interfaces": [
+      "net/minecraftforge/fml/client/registry/IRenderFactory"
+    ]
+  },
+  "com/yuti/kidnapmod/util/handlers/RenderHandler$2": {
+    "name": "com/yuti/kidnapmod/util/handlers/RenderHandler$2",
+    "interfaces": [
+      "net/minecraftforge/fml/client/registry/IRenderFactory"
+    ]
+  },
+  "com/yuti/kidnapmod/util/handlers/RenderHandler$3": {
+    "name": "com/yuti/kidnapmod/util/handlers/RenderHandler$3",
+    "interfaces": [
+      "net/minecraftforge/fml/client/registry/IRenderFactory"
+    ]
+  },
+  "com/yuti/kidnapmod/util/handlers/RenderHandler$4": {
+    "name": "com/yuti/kidnapmod/util/handlers/RenderHandler$4",
+    "interfaces": [
+      "net/minecraftforge/fml/client/registry/IRenderFactory"
+    ]
+  },
+  "com/yuti/kidnapmod/util/handlers/extrainventoryevents/ClientExtraBondageInventoryEventHandler": {
+    "name": "com/yuti/kidnapmod/util/handlers/extrainventoryevents/ClientExtraBondageInventoryEventHandler",
+    "annotations": [
+      {
+        "type": "METHOD",
+        "name": "Lnet/minecraftforge/fml/common/eventhandler/SubscribeEvent;",
+        "target": "tooltipEvent(Lnet/minecraftforge/event/entity/player/ItemTooltipEvent;)V"
+      }
+    ]
+  },
+  "com/yuti/kidnapmod/util/handlers/extrainventoryevents/EntityExtraBondageInventoryEventHandler": {
+    "name": "com/yuti/kidnapmod/util/handlers/extrainventoryevents/EntityExtraBondageInventoryEventHandler",
+    "annotations": [
+      {
+        "type": "METHOD",
+        "name": "Lnet/minecraftforge/fml/common/eventhandler/SubscribeEvent;",
+        "target": "cloneCapabilitiesEvent(Lnet/minecraftforge/event/entity/player/PlayerEvent$Clone;)V"
+      },
+      {
+        "type": "METHOD",
+        "name": "Lnet/minecraftforge/fml/common/eventhandler/SubscribeEvent;",
+        "target": "attachCapabilitiesPlayer(Lnet/minecraftforge/event/AttachCapabilitiesEvent;)V"
+      },
+      {
+        "type": "METHOD",
+        "name": "Lnet/minecraftforge/fml/common/eventhandler/SubscribeEvent;",
+        "target": "playerJoin(Lnet/minecraftforge/event/entity/EntityJoinWorldEvent;)V"
+      },
+      {
+        "type": "METHOD",
+        "name": "Lnet/minecraftforge/fml/common/eventhandler/SubscribeEvent;",
+        "target": "onStartTracking(Lnet/minecraftforge/event/entity/player/PlayerEvent$StartTracking;)V"
+      },
+      {
+        "type": "METHOD",
+        "name": "Lnet/minecraftforge/fml/common/eventhandler/SubscribeEvent;",
+        "target": "onPlayerLoggedOut(Lnet/minecraftforge/fml/common/gameevent/PlayerEvent$PlayerLoggedOutEvent;)V"
+      },
+      {
+        "type": "METHOD",
+        "name": "Lnet/minecraftforge/fml/common/eventhandler/SubscribeEvent;",
+        "target": "playerTick(Lnet/minecraftforge/fml/common/gameevent/TickEvent$PlayerTickEvent;)V"
+      },
+      {
+        "type": "METHOD",
+        "name": "Lnet/minecraftforge/fml/common/eventhandler/SubscribeEvent;",
+        "target": "playerDeath(Lnet/minecraftforge/event/entity/player/PlayerDropsEvent;)V"
+      }
+    ]
+  },
+  "com/yuti/kidnapmod/util/handlers/extrainventoryevents/ItemExtraBondageInventoryEventHandler": {
+    "name": "com/yuti/kidnapmod/util/handlers/extrainventoryevents/ItemExtraBondageInventoryEventHandler",
+    "annotations": [
+      {
+        "type": "METHOD",
+        "name": "Lnet/minecraftforge/fml/common/eventhandler/SubscribeEvent;",
+        "target": "itemCapabilityAttach(Lnet/minecraftforge/event/AttachCapabilitiesEvent;)V",
+        "values": {
+          "priority": {
+            "type": "ENUM",
+            "value": "Lnet/minecraftforge/fml/common/eventhandler/EventPriority;/LOWEST"
+          }
+        }
+      }
+    ]
+  },
+  "com/yuti/kidnapmod/util/handlers/extrainventoryevents/ItemExtraBondageInventoryEventHandler$1": {
+    "name": "com/yuti/kidnapmod/util/handlers/extrainventoryevents/ItemExtraBondageInventoryEventHandler$1",
+    "interfaces": [
+      "net/minecraftforge/common/capabilities/ICapabilityProvider"
+    ]
+  },
+  "com/yuti/kidnapmod/util/images/DynamicTextureCache": {
+    "name": "com/yuti/kidnapmod/util/images/DynamicTextureCache",
+    "annotations": [
+      {
+        "type": "METHOD",
+        "name": "Lnet/minecraftforge/fml/common/eventhandler/SubscribeEvent;",
+        "target": "onClientShutDown(Lnet/minecraftforge/fml/common/network/FMLNetworkEvent$ClientDisconnectionFromServerEvent;)V"
+      }
+    ]
+  },
+  "com/yuti/kidnapmod/util/time/Timer": {
+    "name": "com/yuti/kidnapmod/util/time/Timer",
+    "interfaces": [
+      "java/io/Serializable"
+    ]
+  },
+  "com/yuti/kidnapmod/world/structures/SlaveCellStructureGenerator": {
+    "name": "com/yuti/kidnapmod/world/structures/SlaveCellStructureGenerator",
+    "interfaces": [
+      "net/minecraftforge/fml/common/IWorldGenerator"
+    ]
+  },
+  "com/yuti/kidnapmod/world/structures/SlaveSellPointGenerator": {
+    "name": "com/yuti/kidnapmod/world/structures/SlaveSellPointGenerator",
+    "interfaces": [
+      "com/yuti/kidnapmod/util/IStructure"
+    ]
+  },
+  "com/yuti/kidnapmod/world/structures/WorldGenSlaveCell": {
+    "name": "com/yuti/kidnapmod/world/structures/WorldGenSlaveCell",
+    "interfaces": [
+      "com/yuti/kidnapmod/util/IStructure"
+    ]
+  }
+}

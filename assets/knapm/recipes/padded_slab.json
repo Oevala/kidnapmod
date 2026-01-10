@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+  
+    "   ",
+    "   ",
+    "###" 
+  ],
+    
+  "key": {
+    "#": {
+      "item": "knapm:padded",
+	  "data": 0
+    }
+  },
+ 
+  "result": {
+    "item": "knapm:padded_slab",
+	"data": 0,
+    "count": 6
+  }
+}

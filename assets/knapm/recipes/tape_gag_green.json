@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+	{
+		"item": "knapm:duct_tape",
+		"data": 13
+	}
+  ],
+  "result": {
+    "item": "knapm:tape_gag",
+	"data" : 13,
+    "count": 8
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+	{
+		"item": "minecraft:slime_ball",
+		"data": 0
+	},
+	{
+		"item": "minecraft:slime_ball",
+		"data": 0
+	},
+	{
+		"item": "minecraft:slime_ball",
+		"data": 0
+	},
+	{
+		"item": "minecraft:slime_ball",
+		"data": 0
+	}
+  ],
+  "result": {
+    "item": "knapm:slime_gag",
+	"data" : 0,
+    "count": 8
+  }
+}

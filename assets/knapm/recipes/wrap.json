@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+  
+    "   ",
+    "   ",
+    "###" 
+  ],
+    
+  "key": {
+    "#": {
+      "item": "knapm:duct_tape",
+	   "data": 0
+    }
+  },
+ 
+  "result": {
+    "item": "knapm:wrap",
+    "count": 3
+  }
+}

@@ -1,0 +1,5 @@
+{
+    "variants": {
+        "variant=default": { "model": "knapm:double_padded_slab" }
+    }
+}

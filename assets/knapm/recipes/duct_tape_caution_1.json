@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+	{
+		"item": "knapm:duct_tape",
+		"data": 4
+	},
+	{
+		"item": "minecraft:dye",
+		"data": 0
+	}
+  ],
+  "result": {
+    "item": "knapm:duct_tape",
+	"data" : 17,
+    "count": 1
+  }
+}

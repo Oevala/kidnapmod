@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+	{
+		"item": "knapm:ropes",
+		"data": 4
+	}
+  ],
+  "result": {
+    "item": "knapm:ropes_gag",
+	"data" : 4,
+    "count": 4
+  }
+}

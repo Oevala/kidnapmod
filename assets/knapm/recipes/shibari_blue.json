@@ -1,0 +1,26 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+  
+    "###",
+    "#X#",
+    "###"
+  ],
+    
+  "key": {
+    "#": {
+      "item": "knapm:ropes_gag",
+      "data": 11
+    },
+    "X": {
+      "item": "knapm:ropes",
+      "data": 11
+    }
+  },
+ 
+  "result": {
+    "item": "knapm:shibari",
+	"data": 11,
+    "count": 2
+  }
+}

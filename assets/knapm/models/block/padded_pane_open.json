@@ -1,0 +1,9 @@
+{
+    "parent": "knapm:block/mod_pane",
+    "textures":
+    {
+        "bottom": "knapm:blocks/padded_pane_open",
+        "top": "knapm:blocks/padded_pane_open",
+		"side": "knapm:blocks/padded_pane_open"
+    }
+}

@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+	{
+		"item": "minecraft:bed",
+		"data": 14
+	},
+	{
+		"item": "minecraft:redstone_block",
+		"data": 0
+	}
+  ],
+  "result": {
+    "item": "knapm:trapped_bed",
+	"data" : 14,
+    "count": 1
+  }
+}

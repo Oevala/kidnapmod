@@ -1,0 +1,19 @@
+{
+    "variants": {
+		"normal": { 
+			"model": "knapm:padded_pane" 
+		}, 
+        "facing=north,open=false": { "model": "knapm:padded_pane_close" },
+		"facing=up,open=false": { "model": "knapm:padded_pane_close" },
+		"facing=down,open=false": { "model": "knapm:padded_pane_close" },
+        "facing=east,open=false":  { "model": "knapm:padded_pane_close", "y": 90 },
+        "facing=south,open=false": { "model": "knapm:padded_pane_close", "y": 180 },
+        "facing=west,open=false":  { "model": "knapm:padded_pane_close", "y": 270 },
+        "facing=north,open=true": { "model": "knapm:padded_pane_open" },
+		"facing=up,open=true": { "model": "knapm:padded_pane_open" },
+		"facing=down,open=true": { "model": "knapm:padded_pane_open" },
+        "facing=east,open=true":  { "model": "knapm:padded_pane_open", "y": 90 },
+        "facing=south,open=true": { "model": "knapm:padded_pane_open", "y": 180 },
+        "facing=west,open=true":  { "model": "knapm:padded_pane_open", "y": 270 }
+    }
+}

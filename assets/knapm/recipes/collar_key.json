@@ -1,0 +1,30 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+  
+    " ! ",
+    " X ",
+    " # " 
+  ],
+    
+  "key": {
+    "#": {
+      "item": "minecraft:stick",
+	  "data": 0
+    },
+	"X": {
+      "item": "minecraft:iron_ingot",
+	  "data": 0
+    },
+	"!": {
+      "item": "minecraft:gold_ingot",
+	  "data": 0
+    }
+  },
+ 
+  "result": {
+    "item": "knapm:collar_key",
+	"data": 0,
+    "count": 1
+  }
+}

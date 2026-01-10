@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+  
+    " # ",
+    "#X#",
+    " # " 
+  ],
+    
+  "key": {
+    "#": {
+      "item": "minecraft:iron_nugget",
+	  "data": 0
+    },
+    "X": {
+      "item": "minecraft:iron_ingot",
+	  "data": 0
+    }
+  },
+  "result": {
+    "item": "knapm:chain",
+	"data": 0,
+    "count": 1
+  }
+}

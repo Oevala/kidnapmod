@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+  
+    "# #",
+    " # ",
+    "# #" 
+  ],
+    
+  "key": {
+    "#": {
+      "item": "minecraft:wool",
+      "data": 14
+    }
+  },
+ 
+  "result": {
+    "item": "knapm:ropes",
+	"data": 14,
+    "count": 4
+  }
+}

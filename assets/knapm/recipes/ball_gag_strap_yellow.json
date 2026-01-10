@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+	{
+		"item": "knapm:ball_gag",
+		"data": 4
+	},
+	{
+		"item": "minecraft:leather",
+		"data": 0
+	}
+  ],
+  "result": {
+    "item": "knapm:ball_gag_strap",
+	"data": 4,	
+    "count": 1
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+	{
+		"item": "knapm:ropes_gag",
+		"data": 15
+	},
+	{
+		"item": "minecraft:sponge",
+		"data": 0
+	}
+  ],
+  "result": {
+    "item": "knapm:sponge_gag",
+	"data" : 0,
+    "count": 1
+  }
+}

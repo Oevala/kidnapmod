@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+  
+    "#X#",
+    "X#X",
+    "#X#" 
+  ],
+    
+  "key": {
+    "#": {
+      "item": "knapm:ropes",
+      "data": 12
+    },
+    "X": {
+      "item": "minecraft:redstone",
+      "data": 0
+    }
+  },
+ 
+  "result": {
+    "item": "knapm:ropes_trap",
+    "count": 3
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+  
+    "   ",
+    " #X",
+    "   " 
+  ],
+    
+  "key": {
+    "#": {
+      "item": "minecraft:nether_wart",
+	   "data": 0
+    },
+    "X": {
+      "item": "minecraft:obsidian",
+	   "data": 0
+    }
+  },
+ 
+  "result": {
+    "item": "knapm:latex_sack",
+    "count": 8
+  }
+}

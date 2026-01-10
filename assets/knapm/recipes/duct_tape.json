@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+  
+    "   ",
+    "###",
+    "XXX" 
+  ],
+    
+  "key": {
+    "#": {
+      "item": "minecraft:slime_ball",
+      "data": 0
+    },
+    "X": {
+      "item": "minecraft:leather"
+    }
+  },
+  
+  "result": {
+    "item": "knapm:duct_tape",
+	"data": 0,
+    "count": 16
+  }
+}

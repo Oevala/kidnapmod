@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+  
+    "   ",
+    "###",
+    "   " 
+  ],
+    
+  "key": {
+    "#": {
+      "item": "minecraft:wool",
+	  "data": 3
+    }
+  },
+ 
+  "result": {
+    "item": "knapm:blindfold_cloth",
+	"data": 3,
+    "count": 8
+  }
+}

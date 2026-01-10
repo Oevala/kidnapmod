@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+	{
+		"item": "minecraft:vine",
+		"data": 0
+	}
+  ],
+  "result": {
+    "item": "knapm:vine_seed",
+	"data" : 0,
+    "count": 1
+  }
+}

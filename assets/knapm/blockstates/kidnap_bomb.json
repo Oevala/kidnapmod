@@ -1,0 +1,6 @@
+{
+    "variants": {
+        "explode=false": { "model": "knapm:kidnap_bomb" },
+		"explode=true": { "model": "knapm:kidnap_bomb" }
+    }
+}

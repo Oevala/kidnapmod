@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+  
+    "# #",
+    " # ",
+    "# #" 
+  ],
+    
+  "key": {
+    "#": {
+      "item": "minecraft:slime_ball",
+      "data": 0
+    }
+  },
+  
+  "result": {
+    "item": "knapm:slime",
+	"data": 0,
+    "count": 4
+  }
+}

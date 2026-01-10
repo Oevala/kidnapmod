@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+  
+    "   ",
+    "#X#",
+    "   " 
+  ],
+    
+  "key": {
+    "#": {
+      "item": "minecraft:leather",
+	   "data": 0
+    },
+    "X": {
+      "item": "minecraft:stick",
+	   "data": 0
+    }
+  },
+ 
+  "result": {
+    "item": "knapm:tube_gag",
+    "count": 8
+  }
+}
